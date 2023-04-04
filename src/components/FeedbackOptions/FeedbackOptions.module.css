@@ -1,3 +1,23 @@
 .buttonSet {
+  display: flex;
+}
+
+.feedbackButton {
+  display: block;
+  height: 32px;
+  padding: 0 20px;
+  margin-right: 28px;
   border: 1px solid #474a50;
+  border-radius: 8px;
+
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.feedbackButton:not(:last-child) {
+  margin-right: 28px;
+}
+
+.feedbackButton:active {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset;
 }

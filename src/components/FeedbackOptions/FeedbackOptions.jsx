@@ -10,9 +10,14 @@ export class FeedbackOptions extends Component {
       <ul className={css.buttonSet}>
         {Object.keys(options).map(item => (
           <li key={item}>
-            <button onClick={onLeaveFeedback} name={item} type="button">
-              {item}
-              {options[item]}
+            <button
+              onClick={onLeaveFeedback}
+              className={css.feedbackButton}
+              name={item}
+              type="button"
+            >
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+              {/* {options[item]} */}
             </button>
           </li>
         ))}
