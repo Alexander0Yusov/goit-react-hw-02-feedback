@@ -5,8 +5,7 @@
 .feedbackButton {
   display: block;
   height: 32px;
-  padding: 0 20px;
-  margin-right: 28px;
+  padding: 0 12px;
   border: 1px solid #474a50;
   border-radius: 8px;
 
@@ -14,8 +13,8 @@
   cursor: pointer;
 }
 
-.feedbackButton:not(:last-child) {
-  margin-right: 28px;
+.buttonSetItem:not(:last-child) {
+  margin-right: 20px;
 }
 
 .feedbackButton:active {
