@@ -1,10 +1,10 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import css from './FeedbackOptions.module.css';
 
 export class FeedbackOptions extends Component {
   render() {
     const { options, onLeaveFeedback } = this.props;
-    console.log(options);
 
     return (
       <ul className={css.buttonSet}>
@@ -25,3 +25,12 @@ export class FeedbackOptions extends Component {
     );
   }
 }
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.shape({
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+  }),
+  onLeaveFeedback: PropTypes.func,
+};
