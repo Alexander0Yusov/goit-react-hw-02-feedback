@@ -19,7 +19,6 @@ export class App extends Component {
     // объясняется асинхронностью
     this.setState(prevState => {
       return {
-        ...prevState,
         [name]: prevState[name] + 1,
       };
     });
@@ -39,6 +38,8 @@ export class App extends Component {
   };
 
   render() {
+    const { good, neutral, bad } = this.state;
+
     return (
       <div
         style={{
@@ -53,16 +54,16 @@ export class App extends Component {
       >
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={this.state}
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.handleButtonClick}
           />
         </Section>
         <Section title="Statistics">
           {this.countTotalFeedback() ? (
             <Statistics
-              good={this.state.good}
-              neutral={this.state.neutral}
-              bad={this.state.bad}
+              good={good}
+              neutral={neutral}
+              bad={bad}
               total={this.countTotalFeedback()}
               positivePercentage={this.countPositiveFeedbackPercentage()}
             />

@@ -18,9 +18,9 @@ export class Statistics extends Component {
 }
 
 Statistics.propTypes = {
-  positivePercentage: PropTypes.number,
-  total: PropTypes.number,
-  good: PropTypes.number,
-  neutral: PropTypes.number,
-  bad: PropTypes.number,
+  positivePercentage: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
 };
